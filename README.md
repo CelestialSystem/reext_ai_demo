@@ -1,16 +1,58 @@
-# React + Vite
+# ReExt AI Demo: Ext JS to React Migration POC
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository is a **Proof of Concept (POC)** demonstrating a seamless migration path from **Ext JS to React** using the **ReExt wrapper**. It highlights how developers can modernize enterprise applications by embedding advanced **AI capabilities**—specifically natural language filtering and sorting—directly into Ext JS Grid components.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Overview
 
-## React Compiler
+The primary goal of this application is to showcase how organizations can move to React without a "big bang" rewrite. By using the **ReExt library**, you can:
+* **Bridge the Gap:** Run Ext JS components natively within a React functional architecture.
+* **Modernize with AI:** Enhance standard Ext JS Grids with AI-driven logic, allowing users to filter and sort complex datasets using natural language instead of manual UI controls.
+* **Incremental Migration:** Prove the feasibility of a phased transition from Sencha-based architectures to a modern React stack.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Key AI Features
 
-## Expanding the ESLint configuration
+* **AI-Powered Filtering:** Users can type phrases like *"Show me all pending invoices over $500 from last month"* to instantly update the Ext JS Grid store.
+* **Smart Sorter:** Natural language commands for complex multi-column sorting (e.g., *"Sort by region then by highest priority"*).
+* **Semantic Understanding:** Leveraging LLMs to map user intent to Ext JS `proxy` filters and `sorters`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📦 Installation & Setup
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/CelestialSystem/reext_ai_demo.git](https://github.com/CelestialSystem/reext_ai_demo.git)
+    cd reext_ai_demo
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Environment Configuration:**
+    Create a `.env` file and add your AI provider credentials:
+    ```env
+    REACT_APP_AI_SERVICE_URL=your_api_endpoint
+    REACT_APP_AI_API_KEY=your_api_key
+    ```
+
+4.  **Run the App:**
+    ```bash
+    npm start
+    ```
+
+---
+
+## 🏗️ Architecture: The ReExt Approach
+
+This POC follows a specific pattern for migration:
+1.  **The Wrapper:** Using `<ReExt />` to render existing Ext JS Grid definitions.
+2.  **The React Controller:** A React "Parent" component manages the AI input state.
+3.  **The Bridge:** AI outputs are parsed into standard Ext JS `filter` and `sort` objects and applied to the Grid Store via React props.
+
+---
+
+**Developed with ❤️ by [Celestial Systems](https://www.celestialsys.com)**
