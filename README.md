@@ -35,8 +35,8 @@ The primary goal of this application is to showcase how organizations can move t
 3.  **Environment Configuration:**
     Create a `.env` file and add your AI provider credentials:
     ```env
-    REACT_APP_AI_SERVICE_URL=your_api_endpoint
-    REACT_APP_AI_API_KEY=your_api_key
+    OPENAI_API_KEY=your_openai_api_key_here
+    reextkey = "your_reext_trial_key_here"
     ```
 
 4.  **Run the App:**
